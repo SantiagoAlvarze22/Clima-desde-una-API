@@ -1,11 +1,5 @@
 import React, { useState } from 'react';
-const Formulario = () => {
-
-    //state del formulario 
-    const [busqueda, setBusqueda] = useState({
-        ciudad: '',
-        pais: ''
-    });
+const Formulario = ({ busqueda, setBusqueda, setConsultar }) => {
 
     //setErrot para validar los campos 
 
@@ -38,7 +32,7 @@ const Formulario = () => {
         setError(false)
 
         //pasarlo al componente principal
-
+        setConsultar(true)
     }
 
     return (
